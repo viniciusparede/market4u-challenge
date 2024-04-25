@@ -45,25 +45,27 @@ Esta lista apresenta algumas das ferramentas essenciais que todo cientista de da
 Estas são apenas algumas das tecnologias consideradas básicas para o começo de um projeto, mas a lista pode ser expandida conforme a evolução das necessidades do projeto.
 
 
-Cada objetivo do projeto será destrinchado em cada uma das etapas 
+Cada objetivo do projeto será destrinchado em cada uma das etapas, algumas etapas em todos os objetivos do projeto são pilares básicos do projeto, por exemplo a coleta dos dados advindo do proprio banco de dados do aplicativo ou até mesmo outras fontes de dados para realizar o enriquemento dos dados
 
-## Sugetão de Mix de Produtos 
-Para resolver o problema de sugerir um mix de produtos para novas lijas e ajustar o mix em lojas existentes com o objetivo de otimizar o desempenho e a satisfação do cliente, pode-se seguir uma abordagem estrutura baseada em analise de dados e modelagem preditiva da seguinte maneira
+Nesse momento deixo um exemplo de como funcionaria a coleta dos dados e também a analise exploratoria desses dados
 
-### 1. Coleta de Dados
+### Coleta de Dados
  
  - Obter os dados históricos de vendas de outras lojas, incluindo informações sobre produtos, quantidade vendidas, preços e temporadas (Processo de consulta do banco de dados MySQL)
  
  - Dados demongráficos e de mercado: Incluir informações sobre a população local, renda média, preferências de consumo, e concorrências nas áreas proximas às lojas. Nesse processo o enriquecimento de dados é fundamental, uma vez que o banco não possui todos os dados necessários para se montar um modelo.
 
-### 2. Análise Exploratória de Dados
+### Análise Exploratória de Dados
 Exemplo p/ EDA:
  - Análise de tendências: Identificação de quais produtos são mais populares em diferentes regiões ou períodos do ano.
  - Segmentação de clientes: Técnicas de clustering para identificar diferentes segmentos de clientes e suas preferências.
  - Análise de correlação: Relações entre as vendas de diferentes produtos para identificar possíveis combinações ou substituições. 
 
 
-### 3. Modelo Preditivo 
+## Sugetão de Mix de Produtos 
+Para resolver o problema de sugerir um mix de produtos para novas lojas e ajustar o mix em lojas existentes com o objetivo de otimizar o desempenho e a satisfação do cliente, pode-se seguir uma abordagem estrutura baseada em analise de dados e modelagem preditiva da seguinte maneira
+
+### Modelo Preditivo 
 
 Esta fase do projeto envolve a implementação de dois modelos preditivos, executados em paralelo, ambos fundamentais para a tarefa de recomendação. Em sistemas de recomendação, geralmente utilizamos dois tipos principais de algoritmos: Sistemas de Recomendação Baseados em Conteúdo e Sistemas de Recomendação Colaborativos. Para o contexto deste projeto, a aplicação de ambos os algoritmos se mostra bastante adequada
 
@@ -79,23 +81,32 @@ Para as novas lojas, a recomendação baseada em conteúdo é a técnica escolhi
 
 Para as lojas já ativas, o sistema de recomendação de filtragem colaborativa é mais apropriado. Este método analisa padrões de compra e preferências de vários usuários (neste caso, várias lojas da rede) para identificar produtos que possam ser bem-sucedidos em uma loja específica. Utilizando dados de vendas de clientes de múltiplas lojas, o sistema pode sugerir produtos que, embora não tenham sido previamente considerados ou vendidos na loja em questão, demonstraram sucesso em lojas com perfis de consumidores semelhantes. Este modelo é eficaz em ajustar e otimizar o mix de produtos baseado nas experiências compartilhadas de outras lojas, facilitando assim a identificação de oportunidades de vendas cruzadas e a substituição de itens de baixo desempenho por alternativas comprovadas.
 
-### 4. Implementação
+### Implementação e Avaliação de Desempenho
+**Novas Lojas: Teste A/B**
+Para novas lojas, o teste A/B é uma abordagem valiosa para avaliar o impacto do modelo de sugestão de mix de produtos. Neste teste, dividimos as lojas em dois grupos: o Grupo A, composto por lojas que operam sem a implementação do modelo, confiando apenas na experiência do franqueado para a seleção do mix de produtos; e o Grupo B, onde o modelo é utilizado para sugerir o mix de produtos. O faturamento de cada grupo será monitorado durante um período específico, permitindo uma comparação direta dos resultados financeiros. A análise estatística será aplicada para testar a hipótese nula de que o modelo não proporciona um desempenho superior, com o objetivo de validar a eficácia do modelo sugerido.
 
-### 5. Avaliação de Desempenho 
+**Lojas Existentes: Teste MVT**
+Para lojas já estabelecidas, o teste multivariado (MVT) é recomendado. Esse método permite testar múltiplas variáveis simultaneamente para entender o impacto combinado de diversas alterações no mix de produtos. Essa abordagem facilita uma otimização mais detalhada e direcionada do modelo, explorando várias configurações de produto e suas interações. O faturamento também serve como métrica principal nesse contexto, oferecendo uma visão clara de como diferentes combinações influenciam o desempenho financeiro das lojas.
 
-### 6. Iteração e Ajustes
+**Considerações Adicionais**
+É crucial ajustar a análise para eventos de sazonalidade e outros fatores externos que possam influenciar o desempenho das lojas. A separação e análise desses eventos são essenciais para garantir que as comparações entre os modelos sejam justas e baseadas em condições operacionais semelhantes. Isso ajuda a isolar o efeito real do modelo de sugestão de mix de produtos sobre o faturamento das lojas.
+
+Ao adotar essas abordagens de teste, as organizações podem não apenas validar a eficácia dos modelos de Machine Learning em diferentes contextos operacionais, mas também refinar continuamente suas estratégias para otimizar os resultados financeiros e a satisfação do cliente.
 
 
 
 ## Ajuste de Capacidades de Produtos 
 
-### 1. Coleta de dados 
-
-### 2. 
+### Modelo Preditivo 
 
 ## Otimização do Reabastecimento
 
+### Modelo preditivo
 
 
+## Conclusão
+Este projeto apresenta desafios significativos e exige uma compreensão profunda dos conhecimentos de negócios. O documento expõe a metodologia de maneira simplificada, oferecendo uma visão inicial de como podemos abordar as etapas. Contudo, é evidente que a viabilidade das técnicas propostas necessitará de estudos aprofundados, reuniões de acompanhamento, e uma análise detalhada do comportamento dos dados, que podem influenciar o projeto de maneiras inesperadas. Cada projeto envolve um alinhamento interno rigoroso, e a comunicação deve ser clara e eficaz para evitar mal-entendidos.
 
-[Apresentação do Desafio - Mix de Produtos](https://available-salute-e12.notion.site/Projeto-Automatiza-o-Mix-Produtos-f529cc37aaed4a1bb7a149cf27c1cc53?pvs=4)
+A ciência de dados, em essência, envolve a formulação de uma abordagem ao problema e, crucialmente, o teste dessa abordagem. O conceito de "falhar rápido" é vital aqui; a implementação de modelos de MVP para testar o impacto do projeto é essencial para solidificar nossa posição dentro da empresa.
+
+Independentemente dos resultados das avaliações iniciais, desejo sucesso à Market4u e destaco a contribuição do Henrique (CTO), cujo documento meticulosamente detalhado justifica os objetivos do projeto e delineia estratégias para melhor atender às necessidades da empresa. A escolha do candidato, portanto, deve refletir a capacidade de levar esses planos adiante com competência e inovação.
