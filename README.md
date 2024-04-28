@@ -142,4 +142,4 @@ Este projeto apresenta desafios significativos e exige uma compreensão profunda
 
 A ciência de dados, em essência, envolve a formulação de uma abordagem ao problema e, crucialmente, o teste dessa abordagem. O conceito de "falhar rápido" é vital aqui; a implementação de modelos de MVP para testar o impacto do projeto é essencial para solidificar nossa posição dentro da empresa.
 
-Independentemente dos resultados das avaliações iniciais, desejo sucesso à Market4u e destaco a contribuição do Henrique (CTO), cujo documento meticulosamente detalhado justifica os objetivos do projeto e delineia estratégias para melhor atender às necessidades da empresa. A escolha do candidato, portanto, deve refletir a capacidade de levar esses planos adiante com competência e inovação.
+Independentemente dos resultados das avaliações iniciais, desejo sucesso à Market4u e destaco a contribuição do Henrique (CDO), cujo documento meticulosamente detalhado justifica os objetivos do projeto e delineia estratégias para melhor atender às necessidades da empresa. A escolha do candidato, portanto, deve refletir a capacidade de levar esses planos adiante com competência e inovação.
