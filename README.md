@@ -129,12 +129,13 @@ Realização de testes para comparar lojas usando o modelo com lojas controle, p
 Utilização de indicadores como Curva de Ruptura dos itens, Índice de ruptura geral da loja, e performance de vendas dos produtos ajustados para medir o sucesso do projeto.
 
 ## Otimização do Reabastecimento
-
+Com o objetivo de otimizar o reabastecimento das lojas e evitar rupturas de estoque, propõe-se a implementação de um sistema de recomendação utilizando uma abordagem simplificada, especificamente a Regressão Linear. Este método foi escolhido considerando que os ajustes de capacidade de produtos já se baseiam em um modelo teórico que responde a previsões de demanda e a um problema de otimização com restrições de negócios específicas.
 ### Modelo preditivo
 
+O processo de seleção de atributos para o modelo de Regressão Linear será informado por dados provenientes de modelos anteriores, conforme mencionado. Esta abordagem integrada permite que aproveitemos insights existentes para prever com mais precisão o momento ideal de reabastecimento para cada loja. Ao focar em características chave que influenciam diretamente a demanda e os níveis de estoque, nosso modelo visa minimizar as rupturas, garantindo que os produtos estejam disponíveis quando os clientes precisarem deles.
+
 ### Implementação e Avaliação de Desempenho
-
-
+Para a implementação e avaliação do desempenho do modelo, pode ser adotado uma abordagem baseada em comparações diretas de resultados financeiros.  Utilizaremos grupos de controle, selecionando algumas lojas que operarão sem o modelo e outras que implementarão as recomendações do sistema de regressão linear. Esta estratégia nos permite avaliar efetivamente a eficácia do modelo ao comparar a perda de faturamento atribuível a rupturas de estoque entre as lojas. A análise focará não apenas em medir as diferenças em termos monetários, mas também em entender como a implementação do modelo influência a eficiência operacional em termos de faturamento.
 
 ## Conclusão
 Este projeto apresenta desafios significativos e exige uma compreensão profunda dos conhecimentos de negócios. O documento expõe a metodologia de maneira simplificada, oferecendo uma visão inicial de como podemos abordar as etapas. Contudo, é evidente que a viabilidade das técnicas propostas necessitará de estudos aprofundados, reuniões de acompanhamento, e uma análise detalhada do comportamento dos dados, que podem influenciar o projeto de maneiras inesperadas. Cada projeto envolve um alinhamento interno rigoroso, e a comunicação deve ser clara e eficaz para evitar mal-entendidos.
