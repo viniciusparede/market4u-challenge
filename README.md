@@ -93,15 +93,47 @@ Para lojas já estabelecidas, o teste multivariado (MVT) é recomendado. Esse m�
 
 Ao adotar essas abordagens de teste, as organizações podem não apenas validar a eficácia dos modelos de Machine Learning em diferentes contextos operacionais, mas também refinar continuamente suas estratégias para otimizar os resultados financeiros e a satisfação do cliente.
 
-
-
 ## Ajuste de Capacidades de Produtos 
+A etapa de ajuste de capacidade de produto visa otimizar a gestão de estoque nas lojas, garantindo que a alocação de produtos esteja alinhada com a demanda real e as variações sazonais. Essa fase vislumbra maximizar a eficiência operacional e melhorar a experiência do cliente. Abaixo, detalha-se as principais estratégias e metodologias para implementar esse ajuste de forma eficaz.
+
+Inicialmente, é fundamental realizar uma análise detalhada da demanda histórica por produtos, considerando fatores sazonais e tendências de mercado. Essa análise deve incluir a coleta e avaliação de dados de vendas, promoções anteriores e eventos específicos que possam influenciar o consumo. Utilizar técnicas de análise de séries temporais pode ajudar a identificar padrões e prever demandas futuras com maior precisão. A analise de dados aqui é muito importante para limparmos do modelo preditivo qualquer SKU 
+
+Para o cenário descrito, onde o objetivo é ajustar as capacidades dos produtos com base na sazonalidade e variações na demanda, pode-se implementar um modelo de otimização de estoque combinando técnicas de previsão de demanda com otimização de inventário. 
 
 ### Modelo Preditivo 
+
+Na modelagem deste projeto, destacamos a elaboração de dois modelos principais para cada fase do projeto:
+
+ 1. Criação do modelo de demanda
+ 2. Criação do modelo de inventário (Problema de otimização)
+
+Na primeira etapa, abordaremos a venda de alguns produtos utilizando análises de séries temporais. Isso permitirá estabelecer um modelo que não apenas prediz a demanda dos produtos, mas também identifica padrões de sazonalidade e classifica os ciclos de venda.
+
+Para isso, utilizaremos um modelo de previsão de demanda que estima a demanda futura para cada SKU, com base em dados históricos e fatores externos, como tendências de mercado e sazonalidade. Modelos como ARIMA, SARIMA e Holt-Winters são adequados para essa tarefa, dada a sua eficácia em capturar padrões sazonais.
+
+Com as previsões de demanda e a classificação dos SKUs em mãos, aplicaremos modelos de otimização de inventário para determinar o nível ideal de estoque para cada SKU. Este passo envolve um problema de otimização, onde podemos incluir restrições específicas que se alinham ao nosso modelo de negócios.
+
+Após desenvolver esta fase, focamos no modelo de otimização. É essencial modelar a demanda de maneira que possamos chegar a uma equação que permita ajustar a capacidade dos produtos, visualmente representada como uma barra que indica a capacidade ao cliente.
+
+Entre os modelos clássicos de gestão de demanda no varejo estão o Modelo de Pedido Econômico de Quantidade (EOQ) e o Modelo de Ponto de Pedido (ROP). O primeiro calcula a quantidade ideal de estoque para minimizar os custos totais de pedido e manutenção, enquanto o segundo determina o momento adequado para reordenar o estoque, baseando-se no nível atual de inventário e no tempo de entrega dos fornecedores. Estes modelos serão adaptados ao desenvolvimento do nosso modelo de negócio, considerando a previsão de demanda, sazonalidade, ciclos de venda e restrições como espaço físico, capital de giro, entre outros fatores logísticos.
+
+A imagem abaixo ilustra a arquitetura do modelo preditivo proposto, integrando variáveis dependentes da previsão de demanda, identificação de ciclos, sazonalidade e suas respectivas restrições, com o objetivo de informar visualmente ao cliente a necessidade de ajustar a capacidade de produtos em sua loja.
+
+![Arquitetura do modelo preditivo](/images/3.png)
+
+### Implementação e Avaliação de Desempenho
+**Teste A/B** 
+Realização de testes para comparar lojas usando o modelo com lojas controle, permitindo avaliar a eficácia das estratégias de ajuste.
+
+**Métricas de Avaliação:**
+Utilização de indicadores como Curva de Ruptura dos itens, Índice de ruptura geral da loja, e performance de vendas dos produtos ajustados para medir o sucesso do projeto.
 
 ## Otimização do Reabastecimento
 
 ### Modelo preditivo
+
+### Implementação e Avaliação de Desempenho
+
 
 
 ## Conclusão
